@@ -3,14 +3,17 @@
 The two-pointer technique is an efficient way to solve problems on arrays and vectors, especially when dealing with sorted arrays or situations requiring linear traversal.
 
 ### Key Idea:
+
 Use two pointers (start and end) to traverse the array simultaneously and solve problems efficiently, often in O(n) time.
 
 ---
 
 ### Example 1: Segregate 0s and 1s
+
 **Problem:** Rearrange a binary array so that all 0s appear before all 1s.
 
 #### Code:
+
 ```cpp
 #include<iostream>
 #include<vector>
@@ -46,6 +49,7 @@ int main() {
 ```
 
 #### Explanation:
+
 1. Use two pointers: `start` begins at index 0, and `end` begins at the last index.
 2. Move `start` forward if the element is 0.
 3. Swap `arr[start]` and `arr[end]` if `arr[start]` is 1 and `arr[end]` is 0.
@@ -57,9 +61,11 @@ int main() {
 ---
 
 ### Example 2: Two Sum
+
 **Problem:** Find two numbers in a sorted array that sum up to a target.
 
 #### Code:
+
 ```cpp
 #include<iostream>
 #include<vector>
@@ -88,6 +94,7 @@ int main() {
 ```
 
 #### Explanation:
+
 1. Start two pointers at the beginning and end of the array.
 2. Calculate the sum of elements at `start` and `end`.
 3. Adjust pointers:
@@ -100,9 +107,11 @@ int main() {
 ---
 
 ### Example 3: Pair with Given Difference
+
 **Problem:** Check if there exists a pair in the array with a given difference `k`.
 
 #### Code:
+
 ```cpp
 #include<iostream>
 #include<vector>
@@ -135,6 +144,7 @@ int main() {
 ```
 
 #### Explanation:
+
 1. Sort the array.
 2. Use two pointers: `start` and `end`.
 3. Check the difference between `arr[end]` and `arr[start]`.
@@ -146,9 +156,11 @@ int main() {
 ---
 
 ### Example 4: Product Pair
+
 **Problem:** Find if there exists a pair of elements in the array whose product equals a given value.
 
 #### Code:
+
 ```cpp
 #include<iostream>
 #include<vector>
@@ -176,10 +188,33 @@ int main() {
 
     cout << "No pair found." << endl;
     return 0;
+
+
+    //for geeks of geeks problem solving
+    //like this we have to solve 
+    bool isProduct(vector<int> arr, long long x) {
+        // code here
+    int n=arr.size();
+        int start=0,end=n-1;
+        sort(arr.begin() ,arr.end());
+        while(start<end){
+          // long long holdes more amount of numbers
+            long long product = (long long)arr[start] * arr[end];
+            if(product==x)
+            return true;
+            else if(product<x)
+            start++;
+            else
+            end--;
+        }
+
+        return false;
+    }
 }
 ```
 
 #### Explanation:
+
 1. Sort the array.
 2. Use two pointers to check the product of elements at `start` and `end`.
 3. Adjust pointers based on the product.
