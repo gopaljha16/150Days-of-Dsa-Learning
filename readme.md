@@ -3,4 +3,5 @@
 # Day3:Prefix and Suffix Sum, Kadane's Algorithm, Equal between 2 Array
 # Day4: Trapping Rain Water, 3 SUM , 4 SUM
 # Day5: Introduction to 2D Array in C++
-# Day6 2D Array Interview question , Wave Form , Spiral Matrix , Transpose Matrix
+# Day6: 2D Array Interview question , Wave Form , Spiral Matrix , Transpose Matrix
+# Day7: Rotate Image, Rotate by 90degree, Rotate matrix Element Clockwise , Rote matrix 180 degree
