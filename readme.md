@@ -6,3 +6,4 @@
 # Day6: 2D Array Interview question , Wave Form , Spiral Matrix , Transpose Matrix
 # Day7: Rotate Image, Rotate by 90degree, Rotate matrix Element Clockwise , Rote matrix 180 degree
 # Day8: Binary Serach In 2D Array , Searhc in a sorted row and col wise Matrix
+# Day9: Majority Elements , Count Frequency of element , Find Missing and Repeating elements
