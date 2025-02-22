@@ -16,30 +16,30 @@ This problem can be solved using the **KMP (Knuth-Morris-Pratt) algorithm** to f
 int minChar(string& s) {
     // Step 1: Create the reversed string
     string rev = s;
-    reverse(rev.begin(), rev.end());
-    int size = s.size();
+    reverse(rev.begin(), rev.end()); // Reverse the string
+    int size = s.size(); // Store original size
      
     // Step 2: Create a new string with a separator ($) to distinguish
     s += '$';  // '$' is a separator to avoid overlap issues
     s += rev;  // Append the reversed string
     
     // Step 3: Compute the LPS array
-    int n = s.size();
-    vector<int> lps(n, 0);
-    int pre = 0, suf = 1;
+    int n = s.size(); // New string length
+    vector<int> lps(n, 0); // Initialize LPS array with 0
+    int pre = 0, suf = 1; // Prefix and suffix pointers
     
     while (suf < n) {
         // If characters match, extend prefix
         if (s[pre] == s[suf]) {
-            lps[suf] = pre + 1;
-            pre++, suf++;
+            lps[suf] = pre + 1; // Store prefix length
+            pre++, suf++; // Move both pointers
         } else {
             // If no match, move prefix back based on previous LPS
             if (pre == 0) {
-                lps[suf] = 0;
-                suf++;
+                lps[suf] = 0; // No match, set to 0
+                suf++; // Move suffix forward
             } else {
-                pre = lps[pre - 1];
+                pre = lps[pre - 1]; // Move prefix back
             }
         }
     }
@@ -85,17 +85,17 @@ Given two strings **a** and **b**, find the minimum number of times **a** needs 
 ```cpp
 // Function to compute LPS array for KMP algorithm
 void lpsFind(vector<int>& lps, string& s) {
-    int pre = 0, suf = 1;
+    int pre = 0, suf = 1; // Prefix and suffix pointers
     while (suf < s.size()) {
         if (s[pre] == s[suf]) {
-            lps[suf] = pre + 1;
-            pre++, suf++;
+            lps[suf] = pre + 1; // Store prefix length
+            pre++, suf++; // Move both pointers
         } else {
             if (pre == 0) {
-                lps[suf] = 0;
-                suf++;
+                lps[suf] = 0; // No match, set to 0
+                suf++; // Move suffix forward
             } else {
-                pre = lps[pre - 1];
+                pre = lps[pre - 1]; // Move prefix back
             }
         }
     }
@@ -103,27 +103,27 @@ void lpsFind(vector<int>& lps, string& s) {
 
 // Function to check if 'b' is a substring of 'haystack' using KMP search
 int kmp_match(string haystack, string needle) {
-    vector<int> lps(needle.size(), 0);
-    lpsFind(lps, needle);
+    vector<int> lps(needle.size(), 0); // Initialize LPS array
+    lpsFind(lps, needle); // Compute LPS for needle
     
-    int first = 0, second = 0;
+    int first = 0, second = 0; // Pointers for haystack and needle
     while (first < haystack.size()) {
         if (needle[second] == haystack[first]) {
-            second++, first++;
+            second++, first++; // Move both pointers forward
         } else {
-            if (second == 0) first++;
-            else second = lps[second - 1];
+            if (second == 0) first++; // Move haystack pointer if no match
+            else second = lps[second - 1]; // Move needle pointer back
         }
-        if (second == needle.size()) return 1;
+        if (second == needle.size()) return 1; // Found substring
     }
-    return 0;
+    return 0; // Not found
 }
 
 int repeatedStringMatch(string a, string b) {
-    if (a == b) return 1;
+    if (a == b) return 1; // Direct match case
     
     int repeat = 1;
-    string temp = a;
+    string temp = a; // Store repeated string
     
     // Step 1: Keep repeating 'a' until its length is >= 'b'
     while (temp.size() < b.size()) {
@@ -138,7 +138,7 @@ int repeatedStringMatch(string a, string b) {
     temp += a;
     if (kmp_match(temp, b)) return repeat + 1;
     
-    return -1;
+    return -1; // Not found
 }
 ```
 
@@ -167,4 +167,6 @@ string b = "cdabcdab";
 - **Both problems leverage KMP algorithm** to optimize search efficiency.
 
 ---
+
+
 
