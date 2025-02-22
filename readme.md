@@ -16,3 +16,4 @@
 # Day16: KMP Algorithm , Longest Prefix Suffix Sum.
 # Day17: String Matching , Kmp 
 # Day18: String Hard Question Min Chars to Add for Palindrome , Repeated String Match 
+# Day19: Introduction to Pointers
