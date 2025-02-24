@@ -17,3 +17,4 @@
 # Day17: String Matching , Kmp 
 # Day18: String Hard Question Min Chars to Add for Palindrome , Repeated String Match 
 # Day19: Introduction to Pointers
+# Day20: Pointers Relationship with array , Arithmetic Pointers
