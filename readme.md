@@ -18,3 +18,4 @@
 # Day18: String Hard Question Min Chars to Add for Palindrome , Repeated String Match 
 # Day19: Introduction to Pointers
 # Day20: Pointers Relationship with array , Arithmetic Pointers
+# Day21: Pointer in Character , Array , Functions
