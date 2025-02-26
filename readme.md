@@ -20,3 +20,4 @@
 # Day20: Pointers Relationship with array , Arithmetic Pointers
 # Day21: Pointer in Character , Array , Functions
 # Day22: Double Pointer , Multiple Pointers and some problems.
+# Day23: Memory Allocation , Static and Dynamic Memory Allocation.
