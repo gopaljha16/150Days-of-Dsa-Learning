@@ -21,3 +21,4 @@
 # Day21: Pointer in Character , Array , Functions
 # Day22: Double Pointer , Multiple Pointers and some problems.
 # Day23: Memory Allocation , Static and Dynamic Memory Allocation.
+# Day24: Memory Allocation in 2D and 3D Array
