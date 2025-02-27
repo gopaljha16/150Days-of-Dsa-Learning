@@ -1,153 +1,165 @@
-# Day 23: Memory Allocation (Static & Dynamic)
+# Day 24: Memory Allocation in 2D & 3D Arrays
 
-## 📌 Memory Allocation in C++
-Memory allocation refers to reserving memory for variables and data structures. It can be **static** or **dynamic**, each with different behaviors.
+## 📌 Understanding Dynamic Memory Allocation in Multi-Dimensional Arrays
+In this section, we will explore how to allocate memory dynamically for **2D and 3D arrays** using pointers.
 
 ---
 
-## 🔹 Static Memory Allocation
-- Memory is allocated **at compile time**.
-- Stored in the **stack**.
-- Memory is **automatically** deallocated at the end of scope.
-- Efficient but **not flexible** (size cannot change during runtime).
+## 🔹 Dynamic Allocation of a 2D Array
+### ✅ Steps to Allocate a 2D Array
+1. **Create an array of pointers** to store row addresses.
+2. **Allocate memory for each row dynamically.**
+3. **Assign values and access elements dynamically.**
+4. **Deallocate memory to prevent leaks.**
 
-### ✅ Example: Static Allocation
+### ✅ Example: Dynamic 2D Array Allocation
 ```cpp
 #include <iostream>
 using namespace std;
 
-int main() {
-    int a = 10; // Memory allocated in stack
-    float b = 5.5; // Stored in stack
-    int arr[5] = {1, 2, 3, 4, 5}; // Fixed size array in stack
+int main(){
+    int n, m;
+    cout << "Enter rows and columns: ";
+    cin >> n >> m;
 
-    cout << "Value of a: " << a << endl;
-    cout << "Address of a: " << &a << endl;
+    // Step 1: Create an array of pointers
+    int **ptr = new int*[n];
+
+    // Step 2: Allocate memory for each row
+    for(int i = 0; i < n; i++){
+        ptr[i] = new int[m];
+    }
+
+    // Step 3: Assigning values
+    cout << "Enter values for the 2D array: " << endl;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cin >> ptr[i][j];
+        }
+    }
+
+    // Step 4: Printing the array
+    cout << "The values in the 2D array are: " << endl;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cout << ptr[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // Step 5: Deallocate memory
+    for(int i = 0; i < n; i++){
+        delete[] ptr[i];
+    }
+    delete[] ptr;
     return 0;
 }
 ```
 
+### 🔍 Explanation:
+- `new int*[n]`: Allocates memory for `n` rows.
+- `new int[m]`: Allocates memory for `m` columns in each row.
+- `delete[] ptr[i]`: Frees each row.
+- `delete[] ptr`: Frees the array of pointers.
+
 ---
 
-## 🔹 Dynamic Memory Allocation
-- Memory is allocated **at runtime** using the `new` keyword.
-- Allocated memory exists **until explicitly deallocated** using `delete`.
-- Stored in the **heap**.
-- Allows for **flexible memory usage**.
+## 🔹 Dynamic Allocation of a 3D Array
+### ✅ Steps to Allocate a 3D Array
+1. **Create a pointer to a pointer to a pointer (`int ***ptr`).**
+2. **Allocate memory for each 2D array (L layers).**
+3. **Allocate memory for each row in each layer.**
+4. **Allocate memory for each column in each row.**
+5. **Assign values, print, and deallocate memory.**
 
-### ✅ Example: Dynamic Allocation
+### ✅ Example: Dynamic 3D Array Allocation
 ```cpp
 #include <iostream>
 using namespace std;
 
-int main() {
-    int *ptr = new int; // Allocating memory in heap
-    *ptr = 5; // Storing value
-    cout << "Value stored in heap: " << *ptr << endl;
-    cout << "Address in heap: " << ptr << endl;
-    
-    delete ptr; // Freeing memory
+int main(){
+    int L, B, H;
+    cout << "Enter dimensions (L B H): ";
+    cin >> L >> B >> H;
+
+    // Step 1: Create an array of pointers to pointers
+    int ***ptr = new int**[L];
+
+    // Step 2: Allocate memory for each 2D array
+    for(int i = 0; i < L; i++){
+        ptr[i] = new int*[B];
+        for(int j = 0; j < B; j++){
+            ptr[i][j] = new int[H];
+        }
+    }
+
+    // Step 3: Assign values
+    for(int i = 0; i < L; i++){
+        for(int j = 0; j < B; j++){
+            for(int k = 0; k < H; k++){
+                ptr[i][j][k] = i + j + k;
+            }
+        }
+    }
+
+    // Step 4: Print the values
+    cout << "The 3D array values are: " << endl;
+    for(int i = 0; i < L; i++){
+        for(int j = 0; j < B; j++){
+            for(int k = 0; k < H; k++){
+                cout << ptr[i][j][k] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+
+    // Step 5: Deallocate memory
+    for(int i = 0; i < L; i++){
+        for(int j = 0; j < B; j++){
+            delete[] ptr[i][j];
+        }
+        delete[] ptr[i];
+    }
+    delete[] ptr;
+
     return 0;
 }
 ```
 
----
-
-## 🔹 Heap vs. Stack Memory
-| Feature | Stack Memory | Heap Memory |
-|---------|-------------|------------|
-| **Allocation Time** | Compile-time | Runtime |
-| **Access Speed** | Faster | Slower |
-| **Flexibility** | Fixed size | Can resize dynamically |
-| **Memory Deallocation** | Automatic | Manual (`delete`) |
-| **Storage** | Local variables | Dynamically allocated variables |
+### 🔍 Explanation:
+- `new int**[L]`: Creates an array of pointers to store addresses of 2D arrays.
+- `new int*[B]`: Creates an array of pointers for rows.
+- `new int[H]`: Allocates memory for columns.
+- `delete[] ptr[i][j]`: Deletes each row in each layer.
+- `delete[] ptr[i]`: Deletes each 2D array.
+- `delete[] ptr`: Deletes the 3D array.
 
 ---
 
-## 🔹 Dynamic Memory Allocation Examples
-
-### ✅ Allocating a Single Variable
-```cpp
-int *ptr = new int; // Allocating memory
-*ptr = 10; // Assigning value
-cout << "Dynamically allocated value: " << *ptr << endl;
-delete ptr; // Freeing memory
+## 🔹 Visual Representation
+### **2D Array Allocation**
+```
+ptr → [ * ] → [1 2 3]
+      [ * ] → [4 5 6]
+      [ * ] → [7 8 9]
 ```
 
-### ✅ Allocating a Dynamic Array
-```cpp
-int n;
-cout << "Enter array size: ";
-cin >> n;
-
-int *arr = new int[n]; // Allocating array dynamically
-
-// Assigning values
-for (int i = 0; i < n; i++) {
-    arr[i] = i + 1;
-}
-
-// Printing values
-cout << "Array elements: ";
-for (int i = 0; i < n; i++) {
-    cout << arr[i] << " ";
-}
-
-// Deallocate memory
-delete[] arr;
+### **3D Array Allocation**
 ```
-
----
-
-## 🔹 Memory Deallocation (Releasing Heap Memory)
-Dynamically allocated memory must be manually released using:
-- `delete` for a **single variable**.
-- `delete[]` for a **dynamically allocated array**.
-
-### ✅ Example: Correct memory deletion
-```cpp
-int *ptr = new int(10);
-delete ptr; // Freeing memory
-
-int *arr = new int[5];
-delete[] arr; // Freeing array memory
-```
-
----
-
-## 🔹 Common Mistakes in Memory Management
-❌ **Forgetting to use `delete`** → leads to **memory leaks**.
-❌ **Using `delete` on an uninitialized pointer** → undefined behavior.
-❌ **Using `delete[]` for a single variable** → causes errors.
-
----
-
-## 🔹 Debugging Memory Allocation
-### ✅ Common Debugging Techniques
-1. **Check for memory leaks** using **Valgrind** or sanitizers (`g++ -fsanitize=address`).
-2. **Check for uninitialized pointers**.
-3. **Use Smart Pointers (`std::unique_ptr`, `std::shared_ptr`)**.
-
-### ✅ Example: Using `std::unique_ptr`
-```cpp
-#include <iostream>
-#include <memory> // Include smart pointers
-
-int main() {
-    unique_ptr<int> ptr(new int(5));
-    cout << "Value: " << *ptr << endl;
-    return 0; // Memory is automatically deallocated
-}
+ptr → [ * ] → [ * ] → [1 2 3]
+               [ * ] → [4 5 6]
+      [ * ] → [ * ] → [7 8 9]
+               [ * ] → [10 11 12]
 ```
 
 ---
 
 ## 🔹 Key Takeaways
-✔ **Static memory allocation is simpler but less flexible.**  
-✔ **Dynamic memory allocation provides flexibility but requires manual deallocation.**  
-✔ **Use `delete` and `delete[]` properly to avoid memory leaks.**  
-✔ **Heap memory is manually managed, while stack memory is automatic.**  
-✔ **Use smart pointers (`unique_ptr`, `shared_ptr`) to avoid manual deletion.**  
+✔ **2D arrays use `int** ptr`, while 3D arrays use `int*** ptr`.**  
+✔ **Memory must be deallocated properly to prevent leaks.**  
+✔ **Heap memory provides flexibility over static arrays.**  
+✔ **Use `delete[]` carefully to free memory.**  
+✔ **Always allocate memory in steps (layers → rows → columns).**  
 
 ---
-
