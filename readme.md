@@ -24,5 +24,5 @@
 # Day24: Memory Allocation in 2D and 3D Array
 # Day25: Introduction to Recursion
 # Day26: How to solve recursion problems from 4 different methods
-# Day27: Factorial sum , Sum of square using recursion 
+# Day27: Factorial sum , Sum of square using , sum of n numbers , power of numbers recursion 
 
