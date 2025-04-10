@@ -31,3 +31,4 @@
 # Day31: Recursion in Binary Search.
 # Day32: Time and Space Complexity in Recursion.
 # Day33: Merge Sort Algorithm.
+# Day34: Quick Sort Algorithm.
