@@ -34,3 +34,4 @@
 # Day34: Quick Sort Algorithm.
 # Day35: Recursion on Subsequence , Print All Subsequence , Generate Parentheses
 # Day36: Recursion Subset Sum and Target Sum
+# Day37: Recursion Perfect Sum Problem and Target Sum with repetition.
