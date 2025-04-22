@@ -38,4 +38,5 @@
 # Day38: Recursion Permutation with array and String.
 # Day39: Recursion Permutation with Repitition and Way to sum N.
 # Day40: Recursion Tower Of Hanoi Problem Code part and dry run.
-# Day41:  Josephus Problem Predict the Winner
+# Day41: Josephus Problem Predict the Winner
+# Day42: Recursion Rat in a Maze Problem
