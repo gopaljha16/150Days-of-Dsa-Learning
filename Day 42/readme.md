@@ -154,4 +154,40 @@ If valid and not visited:
 If reached (n-1,n-1) -> store path
 ```
 
+
+Here's the **time and space complexity analysis** for the **"Rat in a Maze"** problem (Day 42) with repetition not allowed:
+
+---
+
+### 🧠 **Time Complexity: `O(4^(n*n))` (Worst Case)**
+
+#### 📌 Why 4^(n*n)?
+- For each cell `(i, j)`, there are **4 possible directions** to move (U, D, L, R).
+- In the **worst case**, the rat can visit every cell once (if all are open `1`) and try all 4 directions.
+- So for an **n x n grid**, the number of **function calls** in worst case is `4^(n^2)`.
+
+> ⚠️ This is **exponential** due to branching factor `4` at each of the `n^2` positions.
+
+---
+
+### 🧠 **Space Complexity: `O(n^2)`**
+
+#### Breakdown:
+- **Visited matrix**: `O(n^2)` for marking visited cells.
+- **Recursive call stack**: Maximum recursion depth is `O(n^2)` if the path is very long (grid with all 1s and deep DFS).
+- **Path string**: In the worst case, it can be of length `2n` (if path goes diagonally in square grid).
+- **Answer vector**: Depends on the number of valid paths; in worst case it could store all valid paths.
+
+---
+
+### 💡 Final Complexities:
+
+| Component              | Complexity        |
+|------------------------|-------------------|
+| **Time Complexity**     | `O(4^(n^2))`      |
+| **Space Complexity**    | `O(n^2)`          |
+
+---
+
+Would you like me to add this analysis into your GitHub-style notes directly as well?
 ---
