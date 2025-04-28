@@ -43,3 +43,4 @@
 # Day43: Recursion - Print N-bit Binary Numbers Having More 1s than 0s
 # Day44: Object-Oriented Programming in C++ (Classes, Getter/Setter, Padding, Memory Allocation)
 # Day45: Constructor and Destructor in C++
+# Day46: Oops Static data member and Member function , Encapsulation , Abstraction
