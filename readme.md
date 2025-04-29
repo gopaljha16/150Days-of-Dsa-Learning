@@ -44,3 +44,4 @@
 # Day44: Object-Oriented Programming in C++ (Classes, Getter/Setter, Padding, Memory Allocation)
 # Day45: Constructor and Destructor in C++
 # Day46: Oops Static data member and Member function , Encapsulation , Abstraction
+# Day47: Access Modiefier(public , private , protected) , Inheritance , Derived Class.
