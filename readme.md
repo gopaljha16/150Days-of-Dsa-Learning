@@ -45,4 +45,5 @@
 # Day45: Constructor and Destructor in C++
 # Day46: Oops Static data member and Member function , Encapsulation , Abstraction
 # Day47: Access Modiefier(public , private , protected) , Inheritance , Derived Class.
-# Day48: Type Of Inheritance Single , Multi Level , Multiple , Hierarchical , Hybrid , Multipath Inheritance.
+# Day48: Types Of Inheritance Single , Multi Level , Multiple , Hierarchical , Hybrid , Multipath Inheritance.
+# Day49: Polymorphism , Function Overloading , Operator Overloading and Virtual Function
