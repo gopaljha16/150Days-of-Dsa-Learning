@@ -1,0 +1,4 @@
+Original Data
+10 11 23 1 2 
+Sorted Data
+1 2 10 11 23 
