@@ -49,4 +49,5 @@
 # Day49: Polymorphism , Function Overloading , Operator Overloading and Virtual Function
 # Day50: Exception Handling in C++
 # Day51: File Handling in C++
-# Day52:  Introduction To Linked List Traversal and Insertion in a Linked List
+# Day52: Introduction To Linked List Traversal and Insertion in a Linked List
+# Day52: Deletion In Singly Linked Listand Deletion in Constant Time.
