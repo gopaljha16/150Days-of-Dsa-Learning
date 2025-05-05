@@ -50,4 +50,5 @@
 # Day50: Exception Handling in C++
 # Day51: File Handling in C++
 # Day52: Introduction To Linked List Traversal and Insertion in a Linked List
-# Day52: Deletion In Singly Linked Listand Deletion in Constant Time.
+# Day53: Deletion In Singly Linked Listand Deletion in Constant Time.
+# Day54: Reverse A Linked List , Middle of Linked List , Rotate Linked List.
