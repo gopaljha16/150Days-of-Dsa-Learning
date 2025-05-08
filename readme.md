@@ -53,3 +53,4 @@
 # Day53: Deletion In Singly Linked Listand Deletion in Constant Time.
 # Day54: Reverse A Linked List , Middle of Linked List , Rotate Linked List.
 # Day55: Linked List LeetCode Problem: Remove Every Kth Node , Rotate List , Palindrome List
+# Day56: Introduction to Doubly Linked List , Insertion and Deletion in Doubly Linked List
