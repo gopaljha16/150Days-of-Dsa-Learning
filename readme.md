@@ -54,3 +54,4 @@
 # Day54: Reverse A Linked List , Middle of Linked List , Rotate Linked List.
 # Day55: Linked List LeetCode Problem: Remove Every Kth Node , Rotate List , Palindrome List
 # Day56: Introduction to Doubly Linked List , Insertion and Deletion in Doubly Linked List
+# Day57: LinkedList Problems: Remove Duplicates , Merge 2 Sorted LinkedList , Sort a LinkedList
