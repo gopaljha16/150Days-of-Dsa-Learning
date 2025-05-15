@@ -55,3 +55,4 @@
 # Day55: Linked List LeetCode Problem: Remove Every Kth Node , Rotate List , Palindrome List
 # Day56: Introduction to Doubly Linked List , Insertion and Deletion in Doubly Linked List
 # Day57: LinkedList Problems: Remove Duplicates , Merge 2 Sorted LinkedList , Sort a LinkedList
+# Day58: Circular Linked List Detect Loop in Linked List  Find Length of Loop
