@@ -63,3 +63,4 @@
 # Day63: Array Vs Linked List Shutdown
 # Day64: Introduction To STACK Using Array and Linked List.
 # Day65: Problems Solved 10 Using Stack.
+# Day66: Stack Problem Next Greater Element  Next Smaller Element  Stock Span Problem.
