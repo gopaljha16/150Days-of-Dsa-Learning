@@ -72,4 +72,4 @@
 # Day72: Print all Elements in Queue  Implement Queue using Stack  Implement Stack using Queue
 # Day73: Queues with Sliding Window Problems
 # Day74: Introduction to Deque and implementation
-# Day78: Queue Hard: Sliding Window Maximum | Minimum Number of K Consecutive Bit Flips
+# Day75: Queue Hard: Sliding Window Maximum | Minimum Number of K Consecutive Bit Flips
