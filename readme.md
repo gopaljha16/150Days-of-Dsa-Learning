@@ -79,4 +79,5 @@
 # Day79: Binary Tree Problems Mirror Tree ,  Two Nodes are Cousins ,  Check for Balanced Tree Spiral Form
 # Day80: Binary Tree Left View of Binary Tree  , Right View of Binary Tree , Top View of Binary Tree
 # Day81: Binary Tree Iterative , PreOrder , PostOrder , InOder Iterative.
-# Day81: Binary Tree Problems Construct Tree from Inorder & Preorder  Tree from Postorder and Inorder.
+# Day82: Binary Tree Problems Construct Tree from Inorder & Preorder  Tree from Postorder and Inorder.
+# Day83: BBinary Tree Traversal: Vertical Traversal of Binary Tree , Diagonal Traversal , Boundary Traversal.
