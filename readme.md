@@ -84,3 +84,4 @@
 # Day84: Morris Traversal : Inorder Traversal , Flatten Binary Tree to LinkedList , Post Order , PreOrder.
 # Day85: Burning Tree  , Maximum Path Sum between 2 Special Nodes
 # Day86: Binary Search Tree in Data Structure  Implementation, Insertion , Deletion and Search
+# Day87: Binary Search Tree Interview Problem 5 Binary Search Tree Problems in One Shot
