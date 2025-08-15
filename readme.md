@@ -94,3 +94,4 @@
 # Day94: STL in C++ List , Map , Multiset , Pair , Set.
 # Day95: Heap Datastructure ,Insertion and Deletion , Minheap and Maxheap.
 # Day96: Heap Sort  Build Heap in C++  Priority Queue
+# Day97: Heap 6 Interview Problem , Height of Heap , Minimum Cost of ropes , Magician and Chocolates
