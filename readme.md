@@ -95,3 +95,4 @@
 # Day95: Heap Datastructure ,Insertion and Deletion , Minheap and Maxheap.
 # Day96: Heap Sort  Build Heap in C++  Priority Queue
 # Day97: Heap 6 Interview Problem , Height of Heap , Minimum Cost of ropes , Magician and Chocolates
+# Day98: Kth smallest element in an array  Kth Largest element in an array  Heap  Priority Queue
