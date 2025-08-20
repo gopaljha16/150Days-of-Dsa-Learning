@@ -97,3 +97,4 @@
 # Day97: Heap 6 Interview Problem , Height of Heap , Minimum Cost of ropes , Magician and Chocolates
 # Day98: Kth smallest element in an array  Kth Largest element in an array  Heap  Priority Queue
 # Day99: Merge two binary ,Max heaps  Is Binary Tree Heap,  BST to max heap
+# Day100: Heap Hard Problem Kth element in Matrix , Find median in a stream
