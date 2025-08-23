@@ -99,3 +99,4 @@
 # Day99: Merge two binary ,Max heaps  Is Binary Tree Heap,  BST to max heap
 # Day100: Heap Hard Problem Kth element in Matrix , Find median in a stream
 # Day100: Heap Interview Problem Merge K Sorted Linked List,  Merge K Sorted Arrays
+# Day100: Heap Smallest Range Covering Elements from K Lists , Construct Target Array With Multiple Sums
