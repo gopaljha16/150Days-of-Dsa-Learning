@@ -98,5 +98,6 @@
 # Day98: Kth smallest element in an array  Kth Largest element in an array  Heap  Priority Queue
 # Day99: Merge two binary ,Max heaps  Is Binary Tree Heap,  BST to max heap
 # Day100: Heap Hard Problem Kth element in Matrix , Find median in a stream
-# Day100: Heap Interview Problem Merge K Sorted Linked List,  Merge K Sorted Arrays
-# Day100: Heap Smallest Range Covering Elements from K Lists , Construct Target Array With Multiple Sums
+# Day101: Heap Interview Problem Merge K Sorted Linked List,  Merge K Sorted Arrays
+# Day102: Heap Smallest Range Covering Elements from K Lists , Construct Target Array With Multiple Sums
+# Day103: Sliding Window Zero Sum Subarrays , Subarray Sum Equals K
