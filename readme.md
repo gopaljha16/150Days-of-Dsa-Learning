@@ -104,3 +104,4 @@
 # Day104: Sliding Window Subarray Sums Divisible by K , Subarray Product Less Than K
 # Day105: Sliding Window Minimum Size Subarray Sum  Minimum Window Substring
 # Day106: Subarrays with K Different Integers , Count Subarrays Where Max Element Appears at Least K Times , Length of Longest Subarray with At Most K Frequency
+# Day107: Graph Data Structure , Real world example and Types of Graphs
