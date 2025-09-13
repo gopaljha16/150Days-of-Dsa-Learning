@@ -120,6 +120,7 @@
 # Day120: Bellman-Ford Algorithm - Distance from the Source
 # Day121: Floyd Warshall Algorithm - MultiSource Shortest Path Algorithm
 # Day122: Graphs Knight Walk , Shortest Source to Destination Path in Binary Matrix , Find whether path exist
+# Day123: Euler Path and Euler Circuit in a Graph
 
 
  
