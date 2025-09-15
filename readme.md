@@ -123,6 +123,7 @@
 # Day123: Euler Path and Euler Circuit in a Graph
 # Day124: Circle Of String (Eulerian Cycle)
 # Day125: Minimum Spanning Tree  Prim’s Algorithm 
+# Day126: Kruskal's Algorithm -> Disjoint set 
 
 
  
