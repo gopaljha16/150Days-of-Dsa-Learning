@@ -122,6 +122,7 @@
 # Day122: Graphs Knight Walk , Shortest Source to Destination Path in Binary Matrix , Find whether path exist
 # Day123: Euler Path and Euler Circuit in a Graph
 # Day124: Circle Of String (Eulerian Cycle)
+# Day125: Minimum Spanning Tree  Prim’s Algorithm 
 
 
  
